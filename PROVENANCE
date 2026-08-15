@@ -1,0 +1,13 @@
+zero-indexer-shim Caution enclave ('zeronym-shim-8')
+source repo:     github.com/ShieldedLabs/zero
+serves:          zeronym-shim-8.shieldedinfra.net (TLS terminated in-enclave, ACME production)
+backend:         66.241.124.200:443 verified as na.zec.rocks
+diversion:       ON -> Nym mixnet, hub(s): 84MNVA8qiMHovNCTEwceUsTZuj8rjA7Jc3VsD5spF251.3FHbvL69WrhBviKnEhEFZFErafterJQyMpP3hB9UgGyi@GD9GX9Qb4poPf2JTf3Z9iggABxojVfPB3AgY59RXKu6n
+app source:      https://github.com/ShieldedLabs/zero-shim
+source commit:   bfa9ad718ea33c470f5964a8e7afccced9388349
+expected binary: 2009f9b37404ceba8846c0157d3fadb169f0595afc04fb889efb17f22c3a22c9
+
+The binary inside this EIF should hash to the value above. Verify with:
+  git clone https://github.com/ShieldedLabs/zero && cd zero
+  git checkout bfa9ad718ea33c470f5964a8e7afccced9388349
+  sh zeronym/shim/deploy/reproduce.sh
